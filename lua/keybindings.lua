@@ -240,4 +240,18 @@ pluginKeys.gitsigns_on_attach = function(bufnr)
 	map({ "o", "x" }, "ig", ":<C-U>Gitsigns select_hunk<CR>")
 end
 
+-- 代码注释插件
+-- see ./lua/plugin-config/comment.lua
+pluginKeys.comment = {
+	-- Normal 模式快捷键
+	toggler = {
+		line = "gcc", -- 行注释
+		block = "gbc", -- 块注释
+	},
+	-- Visual 模式
+	opleader = {
+		line = "gc",
+		bock = "gb",
+	},
+}
 return pluginKeys

@@ -62,10 +62,9 @@ packer.startup({
 		-- 代码格式化 (新增)
 		use("mhartington/formatter.nvim")
 		use({
-			"akinsho/toggleterm.nvim",
-			tag = "*",
+			"numToStr/Comment.nvim",
 			config = function()
-				require("toggleterm").setup()
+				require("Comment").setup()
 			end,
 		})
 	end,

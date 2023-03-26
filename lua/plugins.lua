@@ -67,6 +67,12 @@ packer.startup({
 				require("Comment").setup()
 			end,
 		})
+		use({
+			"stevearc/aerial.nvim",
+			config = function()
+				require("aerial").setup()
+			end,
+		})
 	end,
 	config = {
 		-- 并发数限制

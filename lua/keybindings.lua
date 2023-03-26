@@ -76,6 +76,13 @@ map("n", "<leader>bc", ":BufferLinePickClose<CR>", opt)
 map("n", "<C-p>", ":Telescope find_files<CR>", opt)
 -- 全局搜索
 map("n", "<C-f>", ":Telescope live_grep<CR>", opt)
+
+--aerial
+map("n", "<leader>o", ":AerialOpen<CR>", opt)
+map("n", "<leader>q", ":AerialClose<CR>", opt)
+map("n", "<leader>j", ":AerialNext<CR>", opt)
+map("n", "<leader>k", ":AerialPrev<CR>", opt)
+
 -- 插件快捷键
 local pluginKeys = {}
 

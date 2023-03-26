@@ -61,6 +61,13 @@ packer.startup({
 		use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })
 		-- 代码格式化 (新增)
 		use("mhartington/formatter.nvim")
+		use({
+			"akinsho/toggleterm.nvim",
+			tag = "*",
+			config = function()
+				require("toggleterm").setup()
+			end,
+		})
 	end,
 	config = {
 		-- 并发数限制

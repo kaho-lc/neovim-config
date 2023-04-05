@@ -3,41 +3,71 @@ if not status then
 	vim.notify("没有找到 dashboard")
 	return
 end
+
 db.setup({
+	theme = "doom",
 	config = {
-		header = {
-			[[          ▀████▀▄▄              ▄█ ]],
-			[[            █▀    ▀▀▄▄▄▄▄    ▄▄▀▀█ ]],
-			[[    ▄        █          ▀▀▀▀▄  ▄▀  ]],
-			[[   ▄▀ ▀▄      ▀▄              ▀▄▀  ]],
-			[[  ▄▀    █     █▀   ▄█▀▄      ▄█    ]],
-			[[  ▀▄     ▀▄  █     ▀██▀     ██▄█   ]],
-			[[   ▀▄    ▄▀ █   ▄██▄   ▄  ▄  ▀▀ █  ]],
-			[[    █  ▄▀  █    ▀██▀    ▀▀ ▀▀  ▄▀  ]],
-			[[   █   █  █      ▄▄           ▄▀   ]],
+		footer = {
+			"",
+			"",
+			"https://github.com/kaho-lc",
 		},
+
 		center = {
 			{
-				icon = "  ",
+				icon = "                     ",
+				icon_hl = "title",
+				desc = "Find file                           ",
+				desc_hl = "string",
+				action = "Telescope find_files",
+			},
+			{
+				icon = "                     ",
+				icon_hl = "title",
+				desc = "Find text                           ",
+				desc_hl = "string",
+				action = "Telescope live_grep",
+			},
+			{
+				icon = "                     ",
 				desc = "Projects                            ",
+				icon_hl = "title",
+				desc_hl = "string",
 				action = "Telescope projects",
 			},
 			{
-				icon = "  ",
+				icon = "                     ",
 				desc = "Recently files                      ",
+				icon_hl = "title",
+				desc_hl = "string",
 				action = "Telescope oldfiles",
 			},
 			{
-				icon = "  ",
+				icon = "                     ",
+				icon_hl = "title",
 				desc = "Edit keybindings                    ",
-				action = "edit ~/.config/nvim/lua/keybindings.lua",
+				desc_hl = "string",
+				action = "edit ~/AppData/local/nvim/lua/keybindings.lua",
 			},
 			{
-				icon = "  ",
-				desc = "Edit Projects                       ",
-				action = "edit ~/.local/share/nvim/project_nvim/project_history",
+				icon = "                     ",
+				icon_hl = "title",
+				desc = "Edit init.lua                       ",
+				desc_hl = "string",
+				action = "edit ~/AppData/local/nvim/init.lua",
 			},
 		},
-		footer = { "", "", "https://github.com/nshen/learn-neovim-lua" },
+		header = {
+			[[]],
+			[[ ____  _ _   _            ]],
+			[[| __ )(_) |_| |_ ___ _ __ ]],
+			[[|  _ \| | __| __/ _ \ '__|]],
+			[[| |_) | | |_| ||  __/ |   ]],
+			[[|____/|_|\__|\__\___|_|   ]],
+			[[                                                   ]],
+			[[                [ version : 1.0.0 ]                ]],
+			[[                                                   ]],
+			[[                                                   ]],
+		},
 	},
 })

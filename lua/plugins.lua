@@ -73,6 +73,7 @@ packer.startup({
 				require("aerial").setup()
 			end,
 		})
+    use("simrat39/rust-tools.nvim")
 	end,
 	config = {
 		-- 并发数限制
